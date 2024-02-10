@@ -1,0 +1,15 @@
+<div class="border shadow mx-auto w-50 p-3">
+    <h1 class="display-5 text-center">Add New Post</h1>
+    <div *ngIf="isNewPostCreated" class="alert alert-success" role="alert">
+        New Post has been added Successfully!!!
+    </div>
+    <form [formGroup]="newPostData" (ngSubmit)="onAddedNewPost()">
+        <input type="text" name="username" class="form-control p-2 my-3" formControlName="title" placeholder="Title" />
+        <input type="text" name="mobile" class="form-control p-2 my-3" formControlName="tags" placeholder="Tags" />
+        <textarea name="password" class="form-control p-2 my-3" formControlName="content"
+            placeholder="content"></textarea>
+        <input type="checkbox" class="mx-2 form-check-input" name="status" formControlName="status" /><span
+            class="mx-1">Active</span><br>
+        <button class="btn btn-success my-4" type="submit">Add Post</button>
+    </form>
+</div>

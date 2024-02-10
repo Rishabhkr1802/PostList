@@ -1,0 +1,20 @@
+<div class="border shadow mx-auto w-50 p-3">
+    <h1 class="display-5 text-center">Register</h1>
+    <div *ngIf="isUserRegister" class="alert alert-success" role="alert">
+        User has been registered Successfully!!!
+    </div>
+    <form [formGroup]="registerData" (ngSubmit)="onUserRegister()">
+        <input type="text" name="username" class="form-control p-2 my-3" formControlName="username"
+            placeholder="Username" />
+        <input type="password" name="password" class="form-control p-2 my-3" formControlName="password"
+            placeholder="Password" />
+        <input type="email" name="email" class="form-control p-2 my-3" formControlName="email" placeholder="Email" />
+        <input type="text" name="contact" class="form-control p-2 my-3" formControlName="contact_number"
+            placeholder="Contact Number" />
+        <select name="gender" class="form-control p-2 my-3" formControlName="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button class="btn btn-success m-3" type="submit">Register</button>
+    </form>
+</div>

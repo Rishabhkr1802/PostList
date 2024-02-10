@@ -1,0 +1,15 @@
+<div class="border shadow mx-auto w-50 p-3">
+    <h1 class="display-5 text-center">Edit Post</h1>
+    <div *ngIf="isEditPost" class="alert alert-success" role="alert">
+        Post has been updated Successfully!!!
+    </div>
+    <form [formGroup]="editPostData" (ngSubmit)="onUpdatedPost()">
+        <input type="text" name="username" class="form-control p-2 my-3" formControlName="title" placeholder="Title" />
+        <textarea name="password" class="form-control p-2 my-3" formControlName="content"
+            placeholder="content"></textarea>
+        <input type="text" name="mobile" class="form-control p-2 my-3" formControlName="tags" placeholder="Tags" />
+        <input type="checkbox" class="mx-2 form-check-input" name="status" formControlName="status" /><span
+            class="mx-1">Active</span><br>
+        <button class="btn btn-success m-3" type="submit">Update Post</button>
+    </form>
+</div>

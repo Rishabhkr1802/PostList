@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "5904",
+      "contact_number": "7636363636",
+      "email": "admin@gmail.com",
+      "gender": "male",
+      "password": "admin",
+      "username": "admin"
+    }
+  ],
+  "posts": []
+}
